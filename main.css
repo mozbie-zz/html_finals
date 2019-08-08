@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #2f4f4f;
+}
+
+.people {
+  display: grid;
+  grid: repeat(3, 231px)/repeat(4, 200px);
+  grid-gap: 40px 30px;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.person {
+  height: 270px;
+  width: 200px;
+}
+.person:hover {
+  background: #eeeeee;
+  border-radius: 12px;
+  z-index: 1;
+  transform: scale(1.2) translateY(10px);
+  transition: all 1s;
+  z-index: 1;
+}
+.person:hover img {
+  border-radius: 60px;
+  transform: scale(0.9);
+  transition: all 1s;
+}
+.person:hover .rank {
+  right: 20px;
+  transition: right 1s;
+}
+.person:hover .extra {
+  display: block;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.photo img {
+  width: 200px;
+  border-radius: 50%;
+}
+.photo .rank {
+  position: absolute;
+  background: white;
+  width: 32px;
+  height: 32px;
+  line-height: 18px;
+  border-radius: 50%;
+  font-size: 16px;
+  text-align: center;
+  top: 84px;
+  right: 10px;
+  padding-top: 7px;
+  color: #8b0000;
+}
+
+.details {
+  text-align: center;
+  font-size: 20px;
+  line-height: 23px;
+}
+.details .name {
+  color: #2f4f4f;
+  font-weight: 700;
+}
+.details .extra {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #000;
+  margin-top: 9px;
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .people {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
